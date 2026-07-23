@@ -1,0 +1,13 @@
+source:
+  - name: github
+    git_url: https://github.com/Username/RepositoryName.git
+    auth_type: none
+destination:
+  - name: codeberg
+    git_url: https://codeberg.org/Username/REpositoryName.git
+    auth_type: token
+    auth_value: codeberg.token
+  - name: gitea
+    git_url: https://gitea.com/Username/REpositoryName.git
+    auth_type: token
+    auth_value: gitea.token

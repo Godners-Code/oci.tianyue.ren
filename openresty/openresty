@@ -1,0 +1,51 @@
+/var/log/openresty/hook.access.log
+/var/log/openresty/site.access.log
+{
+    daily
+    rotate 30
+    missingok
+    compress
+    dateext
+    dateformat .%Y%m%d
+    su openresty openresty
+    sharedscripts
+    postrotate
+        if [ -f /usr/local/openresty/nginx/logs/nginx.pid ]
+        then
+            kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid)
+        fi
+    endscript
+}
+
+/var/log/openresty/hook.error.log
+/var/log/openresty/site.error.log
+{
+    daily
+    rotate 180
+    missingok
+    compress
+    dateext
+    dateformat .%Y%m%d
+    su openresty openresty
+    sharedscripts
+    postrotate
+        if [ -f /usr/local/openresty/nginx/logs/nginx.pid ]
+        then
+            kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid)
+        fi
+    endscript
+}
+
+/var/log/openresty/sync_repo.log
+/var/log/openresty/hook.runtime.log
+/var/log/openresty/mirror_page.log
+/var/log/openresty/combian_pl.log
+{
+    daily
+    rotate 180
+    missingok
+    compress
+    dateext
+    dateformat .%Y%m%d
+    su openresty openresty
+}

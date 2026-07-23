@@ -1,0 +1,17 @@
+/var/log/openresty/hook.access.log
+/var/log/openresty/hook.error.log {
+    daily
+    rotate 180
+    missingok
+    compress
+    dateext
+    dateformat .%Y%m%d
+    su openresty openresty
+    sharedscripts
+    postrotate
+        if [ -f /usr/local/openresty/nginx/logs/nginx.pid ]
+        then
+            kill -USR1 $(cat /usr/local/openresty/nginx/logs/nginx.pid)
+        fi
+    endscript
+}

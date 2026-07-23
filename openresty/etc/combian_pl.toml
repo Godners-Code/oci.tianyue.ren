@@ -1,0 +1,45 @@
+repo_path = "~/GitHub/Poisoning-Log"
+comb_path = "~/html/Poisoning-Log/combian"
+
+combian_by_filename = [
+    "ChatGPT",
+    "Copilot",
+    "Gemini",
+    "Grok",
+]
+
+[[spec_combian]]
+target_name = "SpecCombian_Manuals.md"
+source_list = [
+    "Manuals/Main_Manuals.md",
+    "Manuals/Take_Dosage.md",
+]
+
+[[spec_combian]]
+target_name = "SpecCombian_Monographic.md"
+source_list = [
+    "Monographic/Clinical_Outcomes_of_Concealed_Drugs.md",
+    "Monographic/Crypt_Gland_I_njury_and_Guidance_to_a_Father.md",
+    "Monographic/Management_of_Hematopoiesis_Under_Over_Dosage.md",
+    "Monographic/Most_Want_to_Say.md",
+    "Monographic/Psychological_Desire_Emptiness_Exploration.md",
+    "Monographic/Toxicology_and_Inferential_Bone_Marrow.md",
+]
+
+[[spec_combian]]
+target_name = "SpecCombian_Novel.md"
+source_list = [
+    "Monographic/The_Way_Back.md",
+    "Monographic/Perfect_Carving.md",
+    "Monographic/The_Twilight_Shadows_in_The_Wine.md",
+    "Monographic/Heart_of_Ashes.md"
+]
+
+[[no_combian]]
+source_name = "README.md"
+target_name = "Source_README.md"
+
+[[no_combian]]
+source_name = "Images/Examinations.jpg"
+target_name = "Source_Examinations.jpg"
+

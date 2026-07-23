@@ -1,0 +1,11 @@
+MAIN_REPO = "godners-code.github.io"
+MAX_SEARCH = 5
+PAGES_HOME = "~/html"
+GITHUB_TOKEN = "github_pat_11ADMYNHA0rANdhWx8TGx6_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REPO_LIST = [
+    "https://github.com/Godners-Code/Pharmaceutical-Chemical-Library.git",
+    "https://github.com/Godners-Code/Poisoning-Log.git",
+    "https://github.com/Godners-Code/TE2.git",
+    "https://github.com/Godners-Code/Voluptus-Research.git",
+    "https://github.com/Godners-Code/godners-code.github.io.git",
+]

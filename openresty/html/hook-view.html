@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Hook Log Viewer</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            margin: 0;
+        }
+        #console {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+        .status-bar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #333;
+            color: #4fc1ff;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">Syncing Realtime Log ...</div>
+    <div id="console">Loading Log Stream ...</div>
+
+    <script>
+        const consoleDiv = document.getElementById('console');
+        
+        function fetchLog() {
+            fetch('/hook-view')
+                .then(response => response.text())
+                .then(text => {
+                    if (consoleDiv.innerText !== text) {
+                        consoleDiv.innerText = text;
+                        window.scrollTo(0, document.body.scrollHeight);
+                    }
+                })
+                .catch(err => {
+                    consoleDiv.innerText = "Failed to Read Log, Please Retry ... \n" + err;
+                });
+        }
+
+        // 每隔 1 秒无感异步刷新一次日志内容
+        setInterval(fetchLog, 1000);
+        fetchLog();
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/var/log/archive-org/wayback.log {
+    daily
+    rotate 30
+    missingok
+    notifempty
+    compress
+    dateext
+    dateformat .%Y%m%d
+    su openresty openresty
+}

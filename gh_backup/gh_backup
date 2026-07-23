@@ -1,0 +1,1 @@
+27 9 * * * "/home/gh_backup/bin/gh_backup.py"

@@ -1,0 +1,4 @@
+# owner: archive-org
+# group: crontab
+# /var/spool/cron/crontabs/archive-org
+  0 20  *  *  * /home/archive-org/bin/wayback.py

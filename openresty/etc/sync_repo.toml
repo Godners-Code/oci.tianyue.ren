@@ -1,0 +1,15 @@
+SHOW_COMMITS = 10
+SHOW_ACTIONS = 10
+GITHUB_HOME = "~/GitHub"
+GITHUB_TOKEN = "github_pat_11ADMYNHA0rANdhWx8TGx6_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REPO_LIST = [
+    "https://github.com/Godners-Code/Pharmaceutical-Chemical-Library.git",
+    "https://github.com/Godners-Code/Poisoning-Log.git",
+    "https://github.com/Godners-Code/TE2.git",
+    "https://github.com/Godners-Code/Voluptus-Research.git",
+    "https://github.com/Godners-Code/godners-code.github.io.git",
+    "https://github.com/Godners-Code/auto-release-action.git",
+    "https://github.com/Godners-Code/deploy-markdown-pages",
+    "https://github.com/Godners-Code/oci.tianyue.ren",
+    "https://github.com/Godners-Code/.github.git",
+]
